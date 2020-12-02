@@ -105,6 +105,8 @@ This tool fingerprints and identifies Web Application Firewall products. It conn
 1. Sends the normal HTTP Request and identifies the number of WAF solutions from the analysis of the response
 2. If unsuccessfull, it sends a number of HTTP requests
 3. If that is also unsucessful, it analyzes all the responses collectively to and guesses if a WAF is in place, responding to the attacks
-wafw00f www.instagram.com
+
+**wafw00f <\domain_URL\>**
 Use the following command to view all the firewalls wafw00f can detect
-wafw00f -l
+
+**wafw00f -l**
