@@ -30,11 +30,15 @@ Using nmap to scan an entire subnet:
 
 ## nmap Scanning Techniques 
 
+
+
 ##### TCP SYN Scan (-sS)
 
 While this is the same as a basic scan, it allows nmap to get the remote host's information without having to do the TCP Handshake. This method sends packets to its destination without creating sessions, thus not allowing the target computer to create any log of this communication due to no session being initiated. 
 
 **nmap -sS <\IP_address\>**
+
+
 
 ##### TCP connect() scan (-sT)
 
@@ -42,11 +46,15 @@ This technique is the default, and is the same as the -sS scan but it does go th
 
 **sudo nmap -sT <\IP_address\>**
 
+
+
 ##### UDP Scan (-sU)
 
 This technique doesn't require any SYN Packets to be sent because it targets the UDP ports. It sends the UDP packets to the remote host, the response can either be that the ICMP is unreachable meaning the port is closed or that the port is open. 
 
 **sudo nmap -sU <\IP_address\>**
+
+
 
 ##### FIN Scan (-sF ) 
 
@@ -54,11 +62,15 @@ When a network has a firewall SYN packet will be blocked. To avoid this from hap
 
 **sudo nmap -sF <\IP_address\>**
 
+
+
 ##### Ping Scan (-sP)
 
 Used to find out whether or not a host is alive or not. Better used in the Live Host Identification stage of information gathering. 
 
 **sudo nmap -sP <\IP_address\>**
+
+
 
 ##### Idle Scan(-sI) 
 
@@ -66,11 +78,15 @@ This scanning technique creates complete anonymity during scanning by not sendin
 
 **sudo nmap -sI <\zombie_hos\t> <\target_host\>**
 
+
+
 ##### Version Detection (-sV)
 
 Used for finding the software version that the target host is running on it's open ports. It can't be used to detect open ports, but it needs them to have the information of the what software version is being used. It uses the TCP SYN scan to find the open ports to execute.
 
 **sudo nmap -sV <\IP_address\>**
+
+
 
 ##### OS Detection nmap
 
