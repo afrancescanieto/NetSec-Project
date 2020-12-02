@@ -32,7 +32,7 @@ Using nmap to scan an entire subnet:
 
 
 
-##### TCP SYN Scan (-sS)
+### TCP SYN Scan (-sS)
 
 While this is the same as a basic scan, it allows nmap to get the remote host's information without having to do the TCP Handshake. This method sends packets to its destination without creating sessions, thus not allowing the target computer to create any log of this communication due to no session being initiated. 
 
@@ -40,7 +40,7 @@ While this is the same as a basic scan, it allows nmap to get the remote host's 
 
 
 
-##### TCP connect() scan (-sT)
+### TCP connect() scan (-sT)
 
 This technique is the default, and is the same as the -sS scan but it does go through the threeway handshake process, thus creating a session and logging the interaction. 
 
@@ -48,7 +48,7 @@ This technique is the default, and is the same as the -sS scan but it does go th
 
 
 
-##### UDP Scan (-sU)
+### UDP Scan (-sU)
 
 This technique doesn't require any SYN Packets to be sent because it targets the UDP ports. It sends the UDP packets to the remote host, the response can either be that the ICMP is unreachable meaning the port is closed or that the port is open. 
 
@@ -56,7 +56,7 @@ This technique doesn't require any SYN Packets to be sent because it targets the
 
 
 
-##### FIN Scan (-sF ) 
+### FIN Scan (-sF ) 
 
 When a network has a firewall SYN packet will be blocked. To avoid this from happening, a FIN scan can send a packet set only with a FIN flag, which doesn't require it to go through the TCP Handshaking. Since the FIN packets don't have to TCP handshake the host isn't able to create a log of this scan. 
 
@@ -64,7 +64,7 @@ When a network has a firewall SYN packet will be blocked. To avoid this from hap
 
 
 
-##### Ping Scan (-sP)
+### Ping Scan (-sP)
 
 Used to find out whether or not a host is alive or not. Better used in the Live Host Identification stage of information gathering. 
 
@@ -72,7 +72,7 @@ Used to find out whether or not a host is alive or not. Better used in the Live 
 
 
 
-##### Idle Scan(-sI) 
+### Idle Scan(-sI) 
 
 This scanning technique creates complete anonymity during scanning by not sending the packets from the source IP address. It sends packets from another host from the TARGET network. The scan pseudcode is as follows:
 
@@ -80,7 +80,7 @@ This scanning technique creates complete anonymity during scanning by not sendin
 
 
 
-##### Version Detection (-sV)
+### Version Detection (-sV)
 
 Used for finding the software version that the target host is running on it's open ports. It can't be used to detect open ports, but it needs them to have the information of the what software version is being used. It uses the TCP SYN scan to find the open ports to execute.
 
@@ -88,7 +88,7 @@ Used for finding the software version that the target host is running on it's op
 
 
 
-##### OS Detection nmap
+### OS Detection nmap
 
 The ability to detect what operating system the remote host is using is one of the more useful features in the nmap tool. By knowing the OS certain vulnerabilities can be inferred and narrowed down. TCP and UDP packets are sent to the target host and the response is analyzed by nmap and compared to its database of operating systems. This process also includes the detection of open ports, thus making it slower.
 
