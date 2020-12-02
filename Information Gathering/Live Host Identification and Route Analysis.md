@@ -100,7 +100,7 @@ sudo netdiscover -r <IP_Address>/24
 In the command above, we are specifying a range for the CIDR number 24. The output contains the devices' IP and MAC addresses, and MAC vendor in that subnet.
 
 
-sudo netdiscover -i <interface> -p # passive scan 
+sudo netdiscover -i <\interface\>-p # passive scan 
 
 
 ## netmask Tool
@@ -110,4 +110,4 @@ A simple tool that can swing between converting the IP range, subnet mask, CIDR,
 The general pseudocode for the netmask command is as follows:
 
 
-sudo netmask -f </start IP/> : </end IP/>
+sudo netmask -f <\start IP\> : <\end IP\>
